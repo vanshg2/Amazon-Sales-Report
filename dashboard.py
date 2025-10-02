@@ -232,25 +232,6 @@ if state_col is not None and date_col is not None and revenue_col is not None:
 
     st.plotly_chart(fig_heatmap, use_container_width=True)
 
-# # ------------------------- Static plots -------------------------
-# st.markdown("---")
-# st.subheader("Prepared static plots")
-# plots_dir = os.path.join(os.getcwd(), 'plots')
-# if os.path.exists(plots_dir):
-#     plot_files = sorted(glob.glob(os.path.join(plots_dir, '*.png')))
-#     if plot_files:
-#         cols = st.columns(2)
-#         for i, p in enumerate(plot_files):
-#             try:
-#                 with cols[i % 2]:
-#                     st.image(Image.open(p), caption=os.path.basename(p), use_column_width=True)
-#             except Exception as e:
-#                 st.warning(f"Could not load image {p}: {e}")
-#     else:
-#         st.info("No PNG images found in the `plots/` folder.")
-# else:
-#     st.info("No `plots/` folder found in the current directory.")
-
 # ------------------------- Data export -------------------------
 st.markdown("---")
 st.subheader("Data & export")
